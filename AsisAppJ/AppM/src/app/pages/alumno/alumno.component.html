@@ -1,0 +1,57 @@
+<ion-content>
+  <app-header></app-header>
+  
+  <div class="menu-container">
+    <!-- Tarjeta de bienvenida -->
+    <ion-card class="welcome-card">
+      <ion-card-content>
+        <ion-avatar>
+          <img src="../../assets/img/avatar.png" alt="Avatar">
+        </ion-avatar>
+        <h2>¡Bienvenido!</h2>
+        <p>¿Qué deseas hacer hoy?</p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Grid de menú -->
+    <div class="menu-grid">
+      <ion-button 
+        class="menu-button" 
+        [routerLink]="('/perfil')" 
+        expand="block">
+        <div class="button-content">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <span>Mi Perfil</span>
+        </div>
+      </ion-button>
+
+      <ion-button 
+        class="menu-button" 
+        [routerLink]="('asignaturas')" 
+        expand="block">
+        <div class="button-content">
+          <ion-icon name="book-outline"></ion-icon>
+          <span>Mis Clases</span>
+        </div>
+      </ion-button>
+
+      <ion-button 
+        class="menu-button" 
+        (click)="logout()" 
+        expand="block"
+        color="danger">
+        <div class="button-content">
+          <ion-icon name="log-out-outline"></ion-icon>
+          <span>Cerrar Sesión</span>
+        </div>
+      </ion-button>
+    </div>
+  </div>
+
+  <!-- Contenido dinámico -->
+  <ion-card class="content-card">
+    <ion-card-content>
+      <ion-router-outlet></ion-router-outlet>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

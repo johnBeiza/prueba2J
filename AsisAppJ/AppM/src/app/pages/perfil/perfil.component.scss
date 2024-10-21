@@ -1,0 +1,33 @@
+.perfil-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contenedor-nombre-perfil {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nombre-perfil {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.rol-perfil {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.editar-perfil {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+ion-button {
+  --border-radius: 5px;
+}

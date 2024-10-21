@@ -1,0 +1,36 @@
+
+.cabecera {
+  display: flex;
+  justify-content: center; // Centra el contenido
+  align-items: center;
+  padding: 10px;
+  background-color: #000000; // Color del fondo del header
+}
+
+.logo {
+  width: 60%;
+  height: auto;
+  margin-bottom: 10px; // Añade un margen abajo para separar el logo del texto
+  margin-right: 10px; // Añade un margen a la izquierda para separar el logo del texto
+}
+
+.titulo {
+  font-size: 1.8rem; // Ajusta el tamaño del texto según sea necesario
+  color: #ffbf00; // Cambia el color del texto a negro
+  margin-left: 10px;
+}
+
+.saludar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #000000;
+}
+
+.saludo {
+  color:#ffffff;
+}
+
+.nombre {
+  color:#ffbf00;
+}

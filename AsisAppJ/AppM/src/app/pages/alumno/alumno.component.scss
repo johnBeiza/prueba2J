@@ -1,0 +1,125 @@
+ion-content {
+  --background: #f5f7fa;
+
+  .menu-container {
+    padding: 16px;
+  }
+
+  // Tarjeta de bienvenida
+  .welcome-card {
+    margin: 0 0 20px;
+    border-radius: 16px;
+    background: #003876;
+    box-shadow: 0 4px 12px rgba(0, 56, 118, 0.15);
+
+    ion-card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+
+      ion-avatar {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 12px;
+        border: 3px solid #ffffff;
+      }
+
+      h2 {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0 0 8px;
+      }
+
+      p {
+        color: #ffffff;
+        opacity: 0.9;
+        margin: 0;
+        font-size: 16px;
+      }
+    }
+  }
+
+  // Grid de menú
+  .menu-grid {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 20px;
+
+    .menu-button {
+      margin: 0;
+      height: 72px;
+      --background: #ffffff;
+      --background-activated: #f0f0f0;
+      --background-hover: #f5f5f5;
+      --color: #003876;
+      --border-radius: 12px;
+      --border-width: 1px;
+      --border-style: solid;
+      --border-color: #e0e0e0;
+      --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      --ripple-color: rgba(0, 56, 118, 0.1);
+
+      &[color="danger"] {
+        --color: #dc3545;
+        --background: #fff5f5;
+        --background-activated: #ffe5e5;
+        --background-hover: #fff0f0;
+        --border-color: #ffebeb;
+      }
+
+      .button-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 4px;
+
+        ion-icon {
+          font-size: 24px;
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  // Tarjeta de contenido
+  .content-card {
+    margin: 0;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    ion-card-content {
+      padding: 16px;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (min-width: 390px) {
+  ion-content {
+    .menu-grid {
+      grid-template-columns: repeat(2, 1fr);
+
+      .menu-button:last-child {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+// Animaciones
+.menu-button {
+  transition: transform 0.2s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

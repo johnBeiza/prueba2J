@@ -1,0 +1,53 @@
+<ion-content>
+  <app-header></app-header>
+  
+  <div class="asignaturas-container">
+    <!-- Encabezado de sección -->
+    <div class="section-header">
+      <h2>
+        <ion-icon name="book-outline"></ion-icon>
+        Mis Asignaturas
+      </h2>
+      <p>Selecciona una asignatura para registrar asistencia</p>
+    </div>
+
+    <!-- Lista de asignaturas -->
+    <ion-list>
+      <ion-item-sliding *ngFor="let asig of asignaturas">
+        <ion-item class="asignatura-item">
+          <div class="asignatura-info">
+            <div class="asignatura-nombre">
+              <ion-icon name="school-outline"></ion-icon>
+              {{asig.nombre}}
+            </div>
+            <div class="asignatura-id">
+              <ion-badge color="primary">{{asig.id}}</ion-badge>
+            </div>
+          </div>
+          
+          <ion-button 
+            slot="end" 
+            fill="clear" 
+            class="scan-button">
+            <ion-icon slot="icon-only" name="qr-code-outline"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <!-- Opciones deslizables -->
+        <ion-item-options side="end">
+          <ion-item-option color="primary">
+            <ion-icon slot="icon-only" name="qr-code"></ion-icon>
+            Escanear
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+    <!-- Mensaje cuando no hay asignaturas -->
+    <div class="empty-state" *ngIf="asignaturas?.length === 0">
+      <ion-icon name="book"></ion-icon>
+      <h3>No hay asignaturas disponibles</h3>
+      <p>Las asignaturas aparecerán aquí cuando estén registradas</p>
+    </div>
+  </div>
+</ion-content>

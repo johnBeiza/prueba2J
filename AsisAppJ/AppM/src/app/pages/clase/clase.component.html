@@ -1,0 +1,23 @@
+<ion-content>
+  <app-header></app-header>
+  
+  <div class="contenedor">
+    <ion-list lines="none">
+      <ion-item *ngFor="let asig of asignaturas" class="asignatura-item">
+        <ion-label>
+          <h2>{{ asig.nombre }}</h2>
+          <p>ID: {{ asig.id }}</p>
+        </ion-label>
+        <ion-button fill="outline" class="generar-qr-button" (click)="generarQR(asig.id)">
+          Generar QR
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+  
+  <div class="qr-container" *ngIf="qrData">
+    <h2>Código QR Generado</h2>
+    <h3>{{ qrData }}</h3>
+    <canvas #qrCanvas></canvas>
+  </div>
+</ion-content>

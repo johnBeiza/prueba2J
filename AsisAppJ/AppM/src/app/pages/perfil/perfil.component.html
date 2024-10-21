@@ -1,0 +1,18 @@
+<ion-content>
+  <app-header></app-header>
+
+  <div class="perfil-contenedor">
+    <!-- Mostrar nombre del usuario si está disponible -->
+    <ng-container *ngIf="usuario !== null">
+      <div class="contenedor-nombre-perfil">
+        <p class="nombre-perfil">{{ usuario.nombreCompleto }}</p>
+        <p class="rol-perfil">Rol: {{ usuario.tipo }}</p>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Botón para editar el perfil -->
+  <div class="editar-perfil">
+    <ion-button expand="block" color="primary">Editar Perfil</ion-button>
+  </div>
+</ion-content>

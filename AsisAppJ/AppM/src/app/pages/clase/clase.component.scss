@@ -1,0 +1,74 @@
+ion-content {
+    --background: #f4f6f9; /* Fondo gris claro para todo el contenido */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  .contenedor {
+    padding: 20px;
+  }
+  
+  ion-list {
+    background-color: #ffffff; /* Fondo blanco para el listado */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .asignatura-item {
+    --background: #e8eef5; /* Fondo claro para cada asignatura */
+    margin-bottom: 10px; /* Separación entre asignaturas */
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  ion-label h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Texto oscuro para mayor legibilidad */
+  }
+  
+  ion-label p {
+    font-size: 14px;
+    color: #666; /* Texto secundario */
+  }
+  
+  .generar-qr-button {
+    --background: #0056b3; /* Azul corporativo para el botón */
+    --color: #ffffff; /* Texto blanco */
+    --border-radius: 8px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    font-size: 14px;
+    transition: transform 0.2s;
+  }
+  
+  .generar-qr-button:hover {
+    transform: translateY(-2px); /* Animación de elevación al hacer hover */
+  }
+  
+  .qr-container {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para el QR */
+  }
+  
+  .qr-container h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .qr-container h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  

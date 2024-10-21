@@ -1,0 +1,80 @@
+<ion-content>
+  <div class="registro-container">
+    <!-- Header con botón de retorno -->
+    <header class="registro-header">
+      <ion-button fill="clear" [routerLink]="['/login']">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+      <h1 class="app-title">AsisApp</h1>
+    </header>
+
+    <!-- Formulario de registro -->
+    <form class="registro-form" (ngSubmit)="registrar()">
+      <ion-item>
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        <ion-input 
+          label="Nombre completo" 
+          labelPlacement="floating" 
+          [counter]="true" 
+          maxlength="50" 
+          [(ngModel)]="nombreCompleto"
+          name="nombreCompleto"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" name="at-outline"></ion-icon>
+        <ion-input 
+          label="Usuario" 
+          labelPlacement="floating" 
+          [counter]="true" 
+          maxlength="30" 
+          [(ngModel)]="usuario"
+          name="usuario"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+        <ion-input 
+          type="password" 
+          label="Contraseña" 
+          labelPlacement="floating" 
+          [counter]="true" 
+          maxlength="30" 
+          [(ngModel)]="clave"
+          name="clave"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-select 
+          [(ngModel)]="tipo"
+          name="tipo"
+          label="Tipo de usuario"
+          labelPlacement="floating"
+          interface="action-sheet">
+          <ion-select-option value="docente">docente</ion-select-option>
+          <ion-select-option value="alumno">alumno</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Botones de acción -->
+      <div class="actions-container">
+        <ion-button expand="block" type="submit">
+          <ion-icon slot="start" name="person-add-outline"></ion-icon>
+          Completar registro
+        </ion-button>
+
+        <ion-button expand="block" fill="clear" [routerLink]="['/login']">
+          <ion-icon slot="start" name="log-in-outline"></ion-icon>
+          Ya tengo una cuenta
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

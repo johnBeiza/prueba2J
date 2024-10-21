@@ -1,0 +1,82 @@
+ion-content {
+  --background: #f5f7fa;
+
+  .registro-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 16px;
+  }
+
+  .registro-header {
+    position: relative;
+    padding: 16px 0 24px;
+    text-align: center;
+
+    ion-button[fill="clear"] {
+      position: absolute;
+      left: -8px;
+      top: 0;
+      --color: #003876;
+      --padding-start: 8px;
+      --padding-end: 8px;
+    }
+
+    .app-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #003876;
+      margin: 0 0 16px;
+    }
+
+    .app-logo {
+      width: 100px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  .registro-form {
+    ion-item {
+      --padding-start: 0;
+      --inner-padding-end: 0;
+      --background: transparent;
+      --border-color: #ddd;
+      --highlight-height: 1px;
+      margin-bottom: 16px;
+
+      ion-icon {
+        color: #003876;
+        margin-right: 8px;
+      }
+    }
+
+    ion-select {
+      width: 100%;
+    }
+  }
+
+  .actions-container {
+    margin-top: 32px;
+
+    ion-button {
+      margin-bottom: 8px;
+      height: 48px;
+
+      &[expand="block"] {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &:not([fill="clear"]) {
+        --background: #003876;
+        --background-activated: #002d5f;
+      }
+
+      &[fill="clear"] {
+        --color: #003876;
+        font-size: 14px;
+      }
+    }
+  }
+}

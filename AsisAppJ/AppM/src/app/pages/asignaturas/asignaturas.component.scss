@@ -1,0 +1,199 @@
+ion-content {
+    --background: #f5f7fa;
+  
+    .asignaturas-container {
+      padding: 16px;
+    }
+  
+    // Encabezado de sección
+    .section-header {
+      margin-bottom: 20px;
+      padding: 0 4px;
+  
+      h2 {
+        margin: 0 0 8px;
+        color: #003876;
+        font-size: 24px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+  
+        ion-icon {
+          font-size: 28px;
+        }
+      }
+  
+      p {
+        margin: 0;
+        color: #666;
+        font-size: 14px;
+      }
+    }
+  
+    // Lista de asignaturas
+    ion-list {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+  
+      ion-item-sliding {
+        margin-bottom: 12px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+  
+      .asignatura-item {
+        --background: #ffffff;
+        --padding-start: 16px;
+        --padding-end: 12px;
+        --padding-top: 12px;
+        --padding-bottom: 12px;
+        --border-radius: 12px;
+        --border-width: 0;
+        
+        .asignatura-info {
+          flex: 1;
+          
+          .asignatura-nombre {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+  
+            ion-icon {
+              color: #003876;
+              font-size: 20px;
+            }
+          }
+  
+          .asignatura-id {
+            ion-badge {
+              --background: #e7f0ff;
+              --color: #003876;
+              font-weight: 500;
+              font-size: 12px;
+              padding: 4px 8px;
+              border-radius: 6px;
+            }
+          }
+        }
+  
+        .scan-button {
+          --color: #003876;
+          --padding-start: 12px;
+          --padding-end: 12px;
+          height: 100%;
+          margin: 0;
+  
+          ion-icon {
+            font-size: 24px;
+          }
+  
+          &:hover {
+            --color: #002d5f;
+          }
+        }
+      }
+  
+      // Opciones deslizables
+      ion-item-option {
+        --background: #003876;
+        font-size: 14px;
+        padding: 0 24px;
+  
+        ion-icon {
+          font-size: 20px;
+        }
+      }
+    }
+  
+    // Estado vacío
+    .empty-state {
+      padding: 48px 20px;
+      text-align: center;
+      color: #666;
+  
+      ion-icon {
+        font-size: 48px;
+        color: #003876;
+        margin-bottom: 16px;
+      }
+  
+      h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+      }
+  
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+  
+  // Animaciones
+  ion-item-sliding {
+    transition: transform 0.2s ease;
+  
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  
+  // Media queries para diferentes tamaños
+  @media (min-width: 390px) {
+    ion-content {
+      .asignaturas-container {
+        padding: 20px;
+      }
+  
+      .section-header {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  
+  // Soporte para modo oscuro
+  @media (prefers-color-scheme: dark) {
+    ion-content {
+      --background: #1a1a1a;
+  
+      .section-header {
+        h2 {
+          color: #ffffff;
+        }
+        p {
+          color: #cccccc;
+        }
+      }
+  
+      .asignatura-item {
+        --background: #2d2d2d;
+  
+        .asignatura-nombre {
+          color: #ffffff;
+        }
+      }
+  
+      ion-item-sliding {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+  
+      .empty-state {
+        color: #cccccc;
+  
+        h3 {
+          color: #ffffff;
+        }
+      }
+    }
+  }

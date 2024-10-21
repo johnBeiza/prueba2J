@@ -1,0 +1,65 @@
+ion-content {
+  --background: #f4f6f9; /* Fondo gris claro, limpio */
+  display: flex;
+  flex-direction: column; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+app-header {
+  flex-shrink: 0;
+}
+
+.contenedor-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100%; /* Ocupar toda la pantalla */
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff; /* Fondo blanco para contraste */
+}
+
+.menu {
+  width: 85%;                /* Ancho ajustado al diseño móvil */
+  padding: 20px;
+  border-radius: 20px;        /* Redondeado suave y moderno */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  align-items: center;
+  gap: 20px;                  /* Más espacio entre los botones */
+  background-color: #1e3a56;  /* Azul oscuro elegante */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+ion-button.boton {
+  --background: #000000;      /* Azul corporativo moderno */
+  --color: #ffffff;           /* Texto blanco */
+  --border-radius: 10px;      /* Esquinas más redondeadas */
+  --border-width: 0;
+  --padding-start: 25px;
+  --padding-end: 25px;
+  --padding-top: 15px;
+  --padding-bottom: 15px;
+  width: 90%;                 /* Ancho adaptado para mejor visualización */
+  font-size: 16px;            /* Texto de buen tamaño */
+  font-weight: bold;          /* Texto resaltado */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s;  /* Suave animación */
+}
+
+ion-button.boton:hover {
+  --background: #000000;      /* Azul más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+.boton-logout {
+  --background: #d9534f;      /* Rojo elegante para "Cerrar Sesión" */
+}
+
+.boton-logout:hover {
+  --background: #c9302c;      /* Rojo más oscuro al hacer hover */
+  transform: translateY(-2px); /* Efecto de elevación en hover */
+}
